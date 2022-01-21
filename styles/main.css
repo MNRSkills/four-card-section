@@ -88,21 +88,27 @@ img {
 
 @media only screen and (min-width: 600px) {
   body {
-    background-color: red;
+    background-color: var(--Very-Light-Gray);
   }
 
   .canvas {
     display: grid;
-    grid-template-columns: [wall-s] 200px [line-1] 200px [line-2] 1fr [line-3] 200px [line-4] 200px [wall-end];
-    grid-template-rows: [start-top] 1fr [middle-top] 100px[line-1] 100px [middle-bottom] 400px [end-bottom];
+    grid-template-columns: [wall-s] 200px [line-1] 200px [line-2] 400px [line-3] 200px [line-4] 200px [wall-end];
+    grid-template-rows: [start-top] 1fr [start-bttm] 1fr [middle-top] 100px[line-1] 100px [middle-bottom] 400px [end-bottom];
     justify-content: center;
     align-items: center;
     padding: 0;
     margin:0;
   }
 
+  .header{
+      grid-row: start-top/start-bttm;
+      grid-column: line-2/line-3;
+      width: 100%;
+  }
+
   .card-one {
-    grid-row: start-top/middle-top;
+    grid-row: start-bttm/middle-top;
     grid-column: line-2;
     width: 100%;
   }
@@ -110,11 +116,13 @@ img {
   .card-two {
     grid-row: middle-top/middle-bottom;
     grid-column-start: span 2;
+    width: 100%;
   }
 
   .card-three {
     grid-row: middle-top/middle-bottom;
     grid-column: line-3/wall-end;
+    width: 100%;
   }
 
   .card-four{
