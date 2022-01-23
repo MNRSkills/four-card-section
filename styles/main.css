@@ -1,4 +1,4 @@
-body {
+:root {
   --Red: rgb(234, 83, 83);
   --Cyan: hsl(180, 62%, 55%);
   --Orange: hsl(34, 97%, 64%);
@@ -6,6 +6,9 @@ body {
   --Very-Light-Gray: hsl(0, 0%, 98%);
   --Grayish-Blue: hsl(229, 6%, 66%);
   --Very-Dark-Blue: hsl(234, 12%, 34%);
+}
+
+body {
   font-size: 15px;
 }
 
@@ -15,7 +18,6 @@ body {
   background-color: var(--Very-Light-Gray);
   font-family: "Poppins", sans-serif;
   width: 100%;
-  /* height: 100vh; */
   color: var(--Grayish-Blue);
   display: grid;
   grid-template-rows: [header-padding] 90px [header-padding-e header-title] 90px [header-title-end header-para-start] 90px [header-para-end] 25px [card-one-start] 350px [card-one-end card-two-start] 350px [card-two-end card-three-start] 350px [card-three-end card-four-start] 350px [card-four-end card-five-start] 350px [card-five-end] 44px;
@@ -35,21 +37,24 @@ p {
 }
 
 .header {
-  /* color:var(--Grayish-Blue) */
   max-width: 330px;
   grid-row: header-padding-e/header-para-end;
+  justify-content: center;
+  align-items: center;
 }
+
 .title {
-  font-size: large;
   display: block;
   grid-row: header-title/header-title-end;
-  display: grid;
-  grid-column: 1fr;
   width: 100%;
 }
 .title h3 {
   font-weight: 200;
   color: var(--Grayish-Blue);
+}
+.title strong {
+  font-size: 20px;
+  color: var(--Very-Dark-Blue);
 }
 .card {
   margin: 20px;
@@ -84,50 +89,4 @@ img {
 .card-four {
   border-top: 3px solid var(--Blue);
   grid-row: card-four-start/card-four-end;
-}
-
-@media only screen and (min-width: 600px) {
-  body {
-    background-color: var(--Very-Light-Gray);
-  }
-
-  .canvas {
-    display: grid;
-    grid-template-columns: [wall-s] 200px [line-1] 200px [line-2] 400px [line-3] 200px [line-4] 200px [wall-end];
-    grid-template-rows: [start-top] 1fr [start-bttm] 1fr [middle-top] 100px[line-1] 100px [middle-bottom] 400px [end-bottom];
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin:0;
-  }
-
-  .header{
-      grid-row: start-top/start-bttm;
-      grid-column: line-2/line-3;
-      width: 100%;
-  }
-
-  .card-one {
-    grid-row: start-bttm/middle-top;
-    grid-column: line-2;
-    width: 100%;
-  }
-
-  .card-two {
-    grid-row: middle-top/middle-bottom;
-    grid-column-start: span 2;
-    width: 100%;
-  }
-
-  .card-three {
-    grid-row: middle-top/middle-bottom;
-    grid-column: line-3/wall-end;
-    width: 100%;
-  }
-
-  .card-four{
-      grid-row: middle-bottom/end-bottom;
-      grid-column: line-2;
-      width: 100%;
-  }
 }

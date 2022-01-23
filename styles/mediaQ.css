@@ -1,0 +1,62 @@
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: var(--Very-Light-Gray);
+  }
+
+  .canvas {
+    display: grid;
+    grid-template-columns: [wall-s] 200px [line-1] 200px [line-2] 400px [line-3] 200px [line-4] 200px [wall-end];
+    grid-template-rows: [start-top] 1fr [start-bttm] 1fr [middle-top] 40px[line-1] 40px [middle-bottom] 1fr [end-bottom];
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header {
+    grid-row: start-top/start-bttm;
+    grid-column: line-2/line-3;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .title strong {
+    font-size: 20px;
+    color: var(--Very-Dark-Blue);
+  }
+
+  h3 {
+    width: 100%;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .card-one {
+    grid-row: start-bttm/middle-top;
+    grid-column: line-2;
+    width: 100%;
+  }
+
+  .card-two {
+    grid-row: middle-top/middle-bottom;
+    grid-column: wall-s/ span 2;
+    width: 100%;
+  }
+
+  .card-three {
+    grid-row: middle-top/middle-bottom;
+    grid-column: line-3/span 2;
+    width: 100%;
+  }
+
+  .card-four {
+    grid-row: middle-bottom/end-bottom;
+    grid-column: line-2;
+    width: 100%;
+  }
+}
