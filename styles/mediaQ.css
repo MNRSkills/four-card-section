@@ -36,25 +36,25 @@
     margin: 0;
   }
 
-  .card-one {
+  .card-two {
     grid-row: start-bttm/middle-top;
     grid-column: line-2;
     width: 100%;
   }
 
-  .card-two {
+  .card-one {
     grid-row: middle-top/middle-bottom;
     grid-column: wall-s/ span 2;
     width: 100%;
   }
 
-  .card-three {
+  .card-four {
     grid-row: middle-top/middle-bottom;
     grid-column: line-3/span 2;
     width: 100%;
   }
 
-  .card-four {
+  .card-three {
     grid-row: middle-bottom/end-bottom;
     grid-column: line-2;
     width: 100%;
